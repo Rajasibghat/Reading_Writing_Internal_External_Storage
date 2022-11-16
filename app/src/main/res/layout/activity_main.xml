@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="enter some text"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        />
+    <Button
+        android:id="@+id/btnWriteMainDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write to main directory"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputText"
+        />
+    <Button
+        android:id="@+id/btnWriteSubDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write to sub directory"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnWriteMainDirectory"
+        />
+
+    <Button
+        android:id="@+id/btnReadMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REad main directory"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnWriteSubDirectory"
+        />
+    <Button
+        android:id="@+id/btnReadSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read sub directory"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnReadMain"
+        />
+
+    <TextView
+        android:id="@+id/textMainDirectory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="#40E3D4C7"
+        android:textColor="@color/black"
+        android:hint="Main directory text will be shown here"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnReadSub"
+        app:layout_constraintBottom_toTopOf="@id/textSubDirectory"
+        />
+    <TextView
+        android:id="@+id/textSubDirectory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="#408BC34A"
+        android:hint="sub directory text will be shown here"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textMainDirectory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
